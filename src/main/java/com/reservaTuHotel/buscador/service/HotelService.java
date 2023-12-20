@@ -20,17 +20,18 @@ public class HotelService implements IHotelService {
 
     @Override
     public void crearHotel(Hotel hotel) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        hotelRepo.save(hotel);
     }
 
     @Override
     public void borrarHotel(Long id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        hotelRepo.deleteById(id);
     }
 
     @Override
     public Hotel buscarHotel(Long id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        Hotel hotel = hotelRepo.findById(id).orElse(null);
+        return hotel;
     }
 
     @Override

@@ -25,5 +25,7 @@ public class Hotel {
     private List<Habitacion> unaHabitacion;
     @OneToMany
     private List<Reserva> unaReserva;
+    @OneToMany
+    private List<Admin> unAdmin;
    
 }
